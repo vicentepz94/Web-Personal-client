@@ -1,0 +1,33 @@
+@import "../../../scss/index.scss";
+
+.menu-top {
+  //   Para mostrar la barra de botones en la misma linea se usa display:flex
+  display: flex;
+
+  button {
+    // en caso de que la imagen no sea transparente y tenga borde se utilizan las configuraciones background-color y border
+    background-color: transparent;
+    border: 0;
+    color: $font-light;
+
+    &:hover {
+      color: $primary-color;
+    }
+    &:focus,
+    &:active {
+      color: $font-light;
+    }
+  }
+
+  &__left {
+    &-logo {
+      width: 200px;
+      padding: 0 10px;
+    }
+  }
+
+  &__right {
+    position: absolute;
+    right: 0;
+  }
+}
