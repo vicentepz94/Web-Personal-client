@@ -1,9 +1,8 @@
 import React, { useState } from "react";
-//import { Route, Routes, Navigate } from "react-router-dom";
 import { Layout } from "antd";
 import MenuTop from "../components/Admin/MenuTop";
 import MenuSider from "../components/Admin/AdminSider/MenuSider";
-//import { getAccessToken, getRefreshToken } from "../api/auth";
+import { getAccessToken } from "../api/auth";
 
 import "./LayoutAdmin.scss";
 
@@ -13,8 +12,10 @@ export default function LayoutAdmin(props) {
   const { Header, Content, Footer } = Layout;
 
 
-  // const accessToken = getAccessToken();
-  //  console.log("Access Token " + accessToken);
+  const token = getAccessToken();
+  console.log(token);
+
+  //  console.log("Access Token " + getAccessToken);
   //  const refreshToken = getRefreshToken();
   //  console.log("Refresh Token " + refreshToken);
 
