@@ -1,9 +1,9 @@
+import "./App.scss";
 import React from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import routes from "./config/routes";
 import AuthProvider from "./providers/AuthProvider";
 
-import "./App.scss";
 
 function App() {
   return (

@@ -3,10 +3,9 @@ import { Layout } from "antd";
 import useAuth from "../hooks/useAuth";
 import MenuTop from "../components/Admin/MenuTop";
 import MenuSider from "../components/Admin/AdminSider/MenuSider";
-import AdminSignIn from "../pages/Admin/SignIn";
 
 import "./LayoutAdmin.scss";
-import { Navigate, Route } from "react-router-dom";
+import { Navigate } from "react-router-dom";
 
 export default function LayoutAdmin(props) {
   const { children } = props;
@@ -14,12 +13,9 @@ export default function LayoutAdmin(props) {
   const { Header, Content, Footer } = Layout;
   const { user, isLoading } = useAuth();
 
-  console.log(user);
-  if (!user) {
+  if (!user && !isLoading) {
     return (
-      <>
-        <Navigate to="/admin/login/" element={<AdminSignIn />} />
-      </>
+        <Navigate to="/admin/login/" replace={true}/>
     );
   }
 
