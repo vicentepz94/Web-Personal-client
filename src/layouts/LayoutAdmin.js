@@ -19,6 +19,7 @@ export default function LayoutAdmin(props) {
     );
   }
 
+  if (user && !isLoading) {
   return (
     <Layout>
       <MenuSider menuCollapsed={menuCollapsed} />
@@ -37,4 +38,7 @@ export default function LayoutAdmin(props) {
       </Layout>
     </Layout>
   );
+}
+return null;
+
 }
