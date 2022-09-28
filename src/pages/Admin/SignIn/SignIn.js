@@ -4,7 +4,7 @@ import Logo from "../../../assets/img/png/logo-white.png";
 import RegisterForm from "../../../components/Admin/RegisterForm";
 import LoginForm from "../../../components/Admin/LoginForm";
 import "./SignIn.scss";
-import { getAccessTokenApi } from '../../../api/auth';
+import { getAccessTokenApi } from "../../../api/auth";
 import { Navigate } from "react-router-dom";
 
 export default function SignIn() {
@@ -12,9 +12,7 @@ export default function SignIn() {
   const { TabPane } = Tabs;
 
   if (getAccessTokenApi()) {
-    return (
-    <Navigate to="/admin" replace={true}/>
-    );
+    return <Navigate to="/admin" replace={true} />;
   }
 
   return (
